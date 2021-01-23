@@ -1,22 +1,71 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
-  <title>Clima App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/iconos/menu/icons8-partly-cloudy-day-48.png">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Rose Weather App</title>
 </head>
 
 <body>
-  <div class="container__titulo">
-    <h1 class="titulo"></h1>
-  </div>
-  <div class="container__hora">
-    <h2 class="hora"></h2>
-  </div>
-</body>
+    <div class="container">
+        <header>
+            <a href="index.html"><img src="/assets/logo.png" alt="Logo Rose Weather" class="header-logo"></a>
+            <nav id="site-nav" class="site-nav">
+                <ul>
+                    <li><strong><a href="index.html">INICIO</a></strong></li>
+                    <li><strong><a href="about.html">PROYECTO</a></strong>
+                    </li>
+                    <li><strong><a href="contacto.html">CONTACTO</a></strong></li>
+                </ul>
+            </nav>
+            <div id="menu-toggle" class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+        </header>
 
+        <main>
+            <div class="row">
+                <div class="col container-fondo">
+                    <div class="container-buscador__clima">
+                        <div class="custom-search ">
+                            <input type="search" class="form-input" placeholder="Buscar Ciudad" required="required">
+
+                            <button type="button" class="btn">Buscar</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col container-resultados">
+                    <div class="box">
+                        <div class="container-resultados__pronostico shadow">
+                            <h3 class="container-resultados__pronostico--titulo">Pronóstico</h3>
+                            <p class="container-resultados__pronostico--fechayhora fechayhora"></p>
+                        </div>
+                        <div class="container-error">
+                            <img src="assets/error.png" alt="Imagen 404" class="img-error">
+                            <div class="mensaje-error">No se encontro la ciudad :( </div>
+                        </div>
+                        <div class="container-resultados__datosciudad shadow"></div>
+                        <div class="container-resultados__pronosticosemanal shadow">
+                            <div class="container-resultados__pronosticosemanal--container">
+                                <h3 class="container-resultados__pronosticosemanal--titulo">Pronóstico semanal</h3>
+                                <div class="container-resultados__pronosticosemanal--container-pronosticos"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p class="copyright">Hecho por el equipo 🌹 de CMYK ++ <a href="/"><img src="/assets/logoFE.svg"
+                        alt="Logo FrontendCafe"></a> Front End Café 2021
+            </p>
+        </footer>
+
+    </div>
+</body>
 </html>

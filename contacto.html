@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/iconos/menu/icons8-partly-cloudy-day-48.png">
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script defer src="formulario.js"></script>
+    <title>Rose Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html"><img src="/assets/logo.png" alt="Logo Rose Weather" class="header-logo"></a>
+            <nav id="site-nav" class="site-nav">
+                <ul>
+                    <li><strong><a href="index.html">INICIO</a></strong></li>
+                    <li><strong><a href="about.html">PROYECTO</a></strong>
+                    </li>
+                    <li><strong><a href="contacto.html">CONTACTO</a></strong></li>
+                </ul>
+            </nav>
+            <div id="menu-toggle" class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+        </header>
+        <main class="main-contacto">
+            <div class="page">
+                <div class="container-page">
+                    <div class="left shadow">
+                        <div class="container-contacto-titulo">
+                            <h1 class="titulo-miembros">Miembros del Equipo Rose CMYK ++</h1>
+                            <div class="container-contacto-miembros">
+                                <div class="contacto contactoAlan">
+                                    <img src=assets/contacto/Alan.jpeg alt="Alan">
+                                    <h2 class="nombreAlan">Alan <br>Rios</h2>
+                                    <p>Dev</p>
+                                    <a href="https://www.linkedin.com/in/alan-rios-510baa170"
+                                        target="_blank"><img class="img-contacto" id="alan-linkedin" src="/assets/linkedin-brands.svg"></a>
+                                    <a href="https://github.com/AlanRios19" target="_blank"><img class="img-contacto" id="alan-github" src="/assets/github-brands.svg"></a>
+                                </div>
+
+                                <div class="contacto contactoLupis">
+                                    <img src="assets/contacto/Lupis.jpeg" alt="desktop image">
+                                    <h2 class="nombreLupis">Lupis <br>Ar</h2>
+                                    <p>UI Designer</p>
+                                    <a href="https://twitter.com/lupsteeler"
+                                        target="_blank"><img class="img-contacto" id="lupis-linkedin" src="/assets/twitter-square-brands.svg">
+                                    </a>
+                                    <a href="https://github.com/luar1" target="_blank"><img class="img-contacto" id="lupis-github" src="/assets/github-brands.svg"></a>
+                                </div>
+
+                                <div class="contacto contactoSanti">
+                                    <img src="assets/contacto/Santiago.jpeg " alt="TV image">
+                                    <h2 class="nombreSanti">Santi Álvarez</h2>
+                                    <p>Dev</p>
+                                    <a href="https://www.linkedin.com/in/santiagoalvarezolivera"
+                                    target="_blank"><img class="img-contacto" id="santi-linkedin" src="/assets/linkedin-brands.svg"></a>
+                                <a href="https://github.com/SantiagoAlvarze22" target="_blank"><img class="img-contacto" id="santi-github" src="/assets/github-brands.svg"></a>
+                                </div>
+
+                                <div class="contacto contactoMalau">
+                                    <img src="assets/contacto/Laura.jpeg " alt="TV image">
+                                    <h2 class="nombreMalau">Ma. Lau Ojeda</h2>
+                                    <p>Front-end Dev</p>
+                                    <a href="https://twitter.com/JustMalau"
+                                    target="_blank"><img class="img-contacto" id="malau-linkedin" src="/assets/twitter-square-brands.svg"></a>
+                                <a href="https://github.com/malauraojeda" target="_blank"><img class="img-contacto" id="malau-github" src="/assets/github-brands.svg"></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="over"><img src="assets/contacto.png" alt="Email"></div>
+                        <form class="formulario" id="formulario">
+                            <h1 class="titulo-comentario">¡Envíanos tus comentarios!</h1>
+                            <!-- Grupo: Nombre -->
+                            <div class="formulario__grupo" id="grupo__nombre">
+                                <label for="nombre" class="formulario__label label">Nombre</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="nombre" id="nombre"
+                                        placeholder="Nombre">
+                                    <img src="/assets/times-circle-solid-dos.svg" class="formulario__validacion-estado-error">
+                                    <img src="/assets/check-circle-solid.svg" class="formulario__validacion-estado">
+                                </div>
+                                <p class="formulario__input-error">El nombre solo puede contener letras.</p>
+                            </div>
+
+                            <!-- Grupo: Correo Electronico -->
+                            <div class="formulario__grupo" id="grupo__correo">
+                                <label for="correo" class="formulario__label">Correo Electrónico</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="correo" id="correo"
+                                        placeholder="ejemplo@correo.com">
+                                    <img src="/assets/times-circle-solid-dos.svg" class="formulario__validacion-estado-error">
+                                    <img src="/assets/check-circle-solid.svg" class="formulario__validacion-estado">
+                                </div>
+                                <p class="formulario__input-error">El correo solo puede contener letras,
+                                    numeros, puntos, guiones, @ y guion bajo.</p>
+                            </div>
+                            <label for="comentario" class="formulario__label">Comentario</label><br />
+                            <textarea class="message" cols="10" rows="3" placeholder="Comentario"></textarea><br />
+                            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                                <button type="submit" class="formulario__btn" id="myBtn">Enviar</button>
+                                <p></p>
+                            </div>
+
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <h1>¡Muchas Gracias!</h1>
+                                        <img src="/assets/check-circle-regular.svg" id="check">
+                                        <button type="button" class="modal__btn" id="modal__btn">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="myModalDos" class="modal_dos">
+
+                                <!-- Modal content -->
+                                <div class="modal-content_dos">
+                                    <div class="modal-body_dos">
+                                        <h1>Por favor, revisa todos los campos</h1>
+                                        <img src="/assets/times-circle-solid.svg" id="check_dos">
+                                        <button type="button" class="modal__btn_dos" id="modal__btn_dos">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p class="copyright">Hecho por el equipo 🌹 de CMYK ++ <a href="/"><img src="/assets/logoFE.svg"
+                        alt="Logo FrontendCafe"></a> Front End Café 2021
+            </p>
+        </footer>
+    </div>
+</html>
