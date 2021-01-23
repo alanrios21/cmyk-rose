@@ -18,3 +18,9 @@ Contiene el Logo, las imágenes de fondo para los diferentes climas. los iconos 
 ## Iconos del clima:
 
 https://icons8.com/icon/set/weather/ios-glyphs
+
+## Trello
+https://trello.com/b/TVrBgpos/cmyk-rose
+
+## Slide
+https://www.canva.com/design/DAESgdJcsCE/dTPoh7V3WOC2LG3SO3dSLw/view?utm_content=DAESgdJcsCE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
